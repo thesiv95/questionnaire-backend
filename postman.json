@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "276ebf31-01f6-48f2-bb34-79ee6eab25a6",
+		"name": "Questionnare_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question_id\": 1,\r\n    \"answer_id\": 1,\r\n    \"user_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/createNewUserAnswer",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"createNewUserAnswer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DB init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/dbInit",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"dbInit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getQuestions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/getQuestions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"getQuestions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3333",
+			"type": "default"
+		}
+	]
+}
